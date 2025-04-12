@@ -2,70 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Joyeux Anniversaire Nancy</title>
+  <title>Pour Nancy</title>
   <style>
     body {
-      background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 50px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+      background: linear-gradient(to top, #ffdee9, #b5fffc);
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
     h1 {
+      color: #ff69b4;
       font-size: 3em;
-      color: #ff4d88;
-      margin-bottom: 10px;
-      animation: bounce 1.5s infinite;
+      text-shadow: 1px 1px #fff;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
     }
 
-    .photo {
-      border-radius: 20px;
-      max-width: 300px;
-      margin: 20px auto;
-      box-shadow: 0 0 20px #ff99cc;
-      border: 4px solid white;
+    button:hover {
+      transform: scale(1.05);
     }
 
-    .message {
-      font-size: 1.5em;
-      color: #333;
-      margin-top: 20px;
-      line-height: 1.6;
+    .butterfly {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://i.ibb.co/qymvGvJ/butterfly.png'); /* petite image papillon */
+      background-size: cover;
+      animation: fly 5s linear infinite;
     }
 
-    .coeur {
-      font-size: 2.5em;
-      color: red;
-      margin-top: 30px;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+    @keyframes fly {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <h1>♡ Joyeux Anniversaire ♡</h1>
-  <h2>Nancy</h2>
-  <img class="photo" src="Messenger_creation_5861B096-E499-4655-BF9B-D9925E3B2738.jpeg" alt="Photo de Nancy">
-  <div class="message">
-    En ce jour spécial, je veux te souhaiter tout le bonheur que tu mérites.<br>
-    Ton sourire illumine le monde et ton énergie rend chaque moment magique.<br>
-    Que cette année t’apporte encore plus de rêves réalisés et d’étoiles dans les yeux.
-  </div>
-  <div class="coeur">Je t’aime Nancy</div>
+  <h1>Un cadeau pour Nancy</h1>
+  <button onclick="releaseButterflies()">Clique ici</button>
+
+  <script>
+    function releaseButterflies() {
+      for (let i = 0; i < 20; i++) {
+        const butterfly = document.createElement('div');
+        butterfly.className = 'butterfly';
+        butterfly.style.left = Math.random() * window.innerWidth + 'px';
+        butterfly.style.bottom = '0px';
+        butterfly.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        document.body.appendChild(butterfly);
+
+        setTimeout(() => {
+          butterfly.remove();
+        }, 5000);
+      }
+    }
+  </script>
 </body>
 </html>
