@@ -3,22 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Le Jardin Secret de Nancy</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Georgia', serif;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 32px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #ffccff;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐔𝐄 𝐍𝐀𝐍𝐂𝐘 𝐃𝐀𝐍𝐒 𝐓𝐎𝐍 𝐉𝐀𝐑𝐃𝐈𝐍 𝐒𝐄𝐂𝐑𝐄𝐓</h1>
+    <p>Ici, les fleurs murmurent ton nom et le vent chante ton sourire. Un lieu rien qu’à toi...</p>
+    <a href="page2.html">Continuer le voyage</a>
+  </div>
 
   <audio autoplay loop>
     <source src="vietsub___lyrics]_Past_lives_-_Sapientdream(128k).mp3" type="audio/mpeg">
-    Ton navigateur ne supporte pas l’audio.
+    Ton navigateur ne supporte pas l'audio HTML5.
   </audio>
-
-  <div class="flowers"></div>
-
-  <div class="container">
-    <h1>𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐔𝐄 𝐍𝐀𝐍𝐂𝐘 𝐃𝐀𝐍𝐒 𝐓𝐎𝐍 𝐉𝐀𝐑𝐃𝐈𝐍 𝐒𝐄𝐂𝐑𝐄𝐓</h1>
-    <img src="Messenger_creation_5861B096-E499-4655-BF9B-D9925E3B2738.jpeg" class="main-image" alt="Nancy souriante">
-    <p class="intro">Ici, les fleurs murmurent ton nom et le vent chante ton sourire. Un lieu rien qu’à toi…</p>
-    <a href="page2.html" class="btn">Continuer le voyage</a>
-  </div>
 </body>
 </html>
