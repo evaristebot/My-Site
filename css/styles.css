@@ -91,4 +91,4 @@ h1 {
   0% { transform: translateX(0) translateY(0); }
   50% { transform: translateX(80vw) translateY(-20vh); }
   100% { transform: translateX(100vw) translateY(10vh); }
-}
+  }
