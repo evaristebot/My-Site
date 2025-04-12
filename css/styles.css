@@ -1,94 +1,57 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
-  background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64');
+  font-family: 'Great Vibes', cursive;
+  background: url('images/fond-magique.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #2e7d32;
-  text-align: center;
   overflow: hidden;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .container {
-  padding-top: 15vh;
-  padding-left: 20px;
-  padding-right: 20px;
+  text-align: center;
+  margin-top: 20vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
-  font-size: 3rem;
-  color: #4caf50;
-  background: rgba(255, 255, 255, 0.6);
-  display: inline-block;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #81c784;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.intro {
+p {
   font-size: 1.5rem;
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.6);
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 15px;
-  color: #3e5c3a;
+  margin-bottom: 2rem;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 30px;
-  background: #66bb6a;
-  color: white;
-  padding: 14px 28px;
+  background-color: #f9b4d1;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 25px;
-  transition: 0.3s ease;
-  box-shadow: 0 0 15px #a5d6a7;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background: #4caf50;
-  box-shadow: 0 0 20px #81c784;
+  background-color: #f48bbd;
 }
 
-/* Animation papillons */
-.butterfly-container {
+.butterflies img {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
+  width: 80px;
+  animation: float 8s infinite ease-in-out;
 }
 
-.butterfly {
-  position: absolute;
-  width: 60px;
-  animation: fly 20s linear infinite;
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
 }
-
-.butterfly:nth-child(1) {
-  top: 10%;
-  left: -10%;
-  animation-delay: 0s;
-}
-.butterfly:nth-child(2) {
-  top: 40%;
-  left: -20%;
-  animation-delay: 5s;
-}
-.butterfly:nth-child(3) {
-  top: 70%;
-  left: -15%;
-  animation-delay: 10s;
-}
-
-@keyframes fly {
-  0% { transform: translateX(0) translateY(0); }
-  50% { transform: translateX(80vw) translateY(-20vh); }
-  100% { transform: translateX(100vw) translateY(10vh); }
-  }
