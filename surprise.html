@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise pour Nancy</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #ffe0f0, #ccefff);
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    h2 {
+      color: #ff69b4;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 2.5em;
+      animation: fadeIn 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .butterfly {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://i.ibb.co/qymvGvJ/butterfly.png');
+      background-size: cover;
+      animation: fly 5s linear infinite;
+    }
+
+    @keyframes fly {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-800px) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h2>Que ces papillons t’apportent un sourire doux</h2>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mp3">
+    Ton navigateur ne supporte pas l’audio.
+  </audio>
+
+  <script>
+    function releaseButterflies() {
+      for (let i = 0; i < 25; i++) {
+        const butterfly = document.createElement('div');
+        butterfly.className = 'butterfly';
+        butterfly.style.left = Math.random() * window.innerWidth + 'px';
+        butterfly.style.bottom = '0px';
+        butterfly.style.animationDuration = (Math.random() * 3 + 4) + 's';
+        document.body.appendChild(butterfly);
+
+        setTimeout(() => {
+          butterfly.remove();
+        }, 6000);
+      }
+    }
+
+    setInterval(releaseButterflies, 800);
+  </script>
+</body>
+</html>
