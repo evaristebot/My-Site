@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Le Jardin Secret de Nancy</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue Nancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736885_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      top: 25%;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      color: #ffe6f7;
+      margin-bottom: 20px;
+      animation: fadeInDown 2s ease-out forwards;
+    }
+
+    .btn {
+      background: #ffc0cb;
+      color: #4b2c2c;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff8eb8;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .butterflies {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.gifer.com/7VE.gif') repeat;
+      background-size: 150px;
+      opacity: 0.4;
+      z-index: 1;
+      animation: moveButterflies 60s linear infinite;
+    }
+
+    @keyframes moveButterflies {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+  </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="[vietsub___lyrics]_Past_lives_-_Sapientdream(128)" type="audio/mpeg">
-    Ton navigateur ne supporte pas l’audio.
-  </audio>
-
-  <div class="flowers"></div>
-
-  <div class="container">
-    <h1>BIENVENUE NANCY DANS TON JARDIN SECRET</h1>
-    <p class="intro">
-      Ce lieu t’est dédié, pour célébrer ta beauté, ta lumière et la magie que tu inspires.
-    </p>
-    <a href="page2.html" class="btn">Découvrir la suite</a>
+  <div class="overlay"></div>
+  <div class="butterflies"></div>
+  <div class="content">
+    <h1>𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐔𝐄 𝐍𝐀𝐍𝐂𝐘 𝐃𝐀𝐍𝐒 𝐓𝐎𝐍 𝐉𝐀𝐑𝐃𝐈𝐍 𝐒𝐄𝐂𝐑𝐄𝐓</h1>
+    <button class="btn" onclick="window.location.href='page2.html'">Entrer</button>
   </div>
+
+  <audio autoplay loop>
+    <source src="musique/[vietsub___lyrics]_Past_lives_-_Sapientdream(128).mp3" type="audio/mpeg">
+    Ton navigateur ne supporte pas l'audio HTML5.
+  </audio>
 </body>
 </html>
