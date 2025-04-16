@@ -1,1 +1,50 @@
-s
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour Nancy ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="pre-surprise" id="preSurprise">
+      <h1>Une surprise pour toi, Nancy</h1>
+      <button id="revealBtn" class="reveal-btn">Clique ici ❤️</button>
+    </div>
+    
+    <div class="surprise-content" id="surpriseContent">
+      <div class="hearts-container" id="heartsContainer"></div>
+      <div class="message-box">
+        <h2 class="message-title">Pour la plus merveilleuse des Nancy</h2>
+        <div class="message-content">
+          <p>Du jour où tu es entrée dans ma vie,</p>
+          <p>Le monde s'est mis à briller d'un éclat particulier.</p>
+          <p>Chaque moment avec toi est un trésor,</p>
+          <p>Et mon cœur bat au rythme de ton nom.</p>
+          <div class="signature">Avec tout mon amour</div>
+        </div>
+      </div>
+      
+      <div class="photo-gallery">
+        <!-- Remplacez les src par vos propres images -->
+        <img src="assets/images/photo1.jpg" alt="Moment avec Nancy" class="gallery-img">
+        <img src="assets/images/photo2.jpg" alt="Souvenir avec Nancy" class="gallery-img">
+        <img src="assets/images/photo3.jpg" alt="Nancy souriante" class="gallery-img">
+      </div>
+      
+      <div class="interactive-elements">
+        <button id="musicBtn" class="music-btn">♫ Musique romantique</button>
+        <button id="memoryBtn" class="memory-btn">Nos souvenirs</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="romanticMusic" loop>
+    <source src="assets/music/romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>s
