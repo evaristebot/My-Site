@@ -1,0 +1,89 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FORMULAIRE */
+form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* TITRE */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #128C7E;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* INPUTS & TEXTAREA */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #25D366;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+/* BOUTON */
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #25D366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #1ebe5d;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
